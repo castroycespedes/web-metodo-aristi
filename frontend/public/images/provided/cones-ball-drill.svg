@@ -1,0 +1,45 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="1024" fill="#5CA33E"/>
+  <defs>
+    <radialGradient id="grass" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 420) rotate(90) scale(760)">
+      <stop stop-color="#B9E76B"/>
+      <stop offset="0.58" stop-color="#67AD40"/>
+      <stop offset="1" stop-color="#2D6D2C"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#grass)"/>
+  <g opacity="0.2">
+    <path d="M0 200C250 170 450 176 650 208C792 230 920 214 1024 194" stroke="#EAF6D2" stroke-width="4"/>
+    <path d="M0 610C250 556 462 554 710 588C838 606 950 594 1024 574" stroke="#EAF6D2" stroke-width="4"/>
+  </g>
+  <g transform="translate(430 40)">
+    <path d="M70 0H240L265 250H42L70 0Z" fill="#F5F6F1"/>
+    <path d="M80 0H114L100 250H58L80 0Z" fill="#004FE0"/>
+    <path d="M198 0H236L250 250H210L198 0Z" fill="#004FE0"/>
+    <path d="M42 188H266" stroke="#D4112B" stroke-width="20"/>
+    <path d="M70 250L28 420" stroke="#F0D7BF" stroke-width="46" stroke-linecap="round"/>
+    <path d="M230 250L276 426" stroke="#F0D7BF" stroke-width="46" stroke-linecap="round"/>
+    <path d="M30 420H98" stroke="#004FE0" stroke-width="36" stroke-linecap="round"/>
+    <path d="M234 426H308" stroke="#004FE0" stroke-width="36" stroke-linecap="round"/>
+    <path d="M22 454H112" stroke="#FC6A38" stroke-width="42" stroke-linecap="round"/>
+    <path d="M232 460H326" stroke="#FC6A38" stroke-width="42" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(402 456)">
+    <ellipse cx="148" cy="176" rx="134" ry="22" fill="#193914" opacity="0.4" filter="url(#blur)"/>
+    <circle cx="148" cy="132" r="126" fill="#F4F4EF"/>
+    <path d="M148 22L188 104L276 118L212 180L228 268L148 226L68 268L84 180L20 118L108 104L148 22Z" fill="#121212"/>
+    <path d="M22 130C78 92 118 74 148 22C178 74 218 92 274 130C226 166 190 196 148 272C106 196 70 166 22 130Z" stroke="#111" stroke-opacity="0.32" stroke-width="14"/>
+  </g>
+  <g transform="translate(60 312)">
+    <path d="M82 0L160 328H4L82 0Z" fill="#FF1B12"/>
+    <ellipse cx="82" cy="328" rx="82" ry="22" fill="#FF5A3C"/>
+    <path d="M62 80H102M50 142H114M38 208H128" stroke="#FF855B" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(210 548)">
+    <path d="M112 0L222 398H2L112 0Z" fill="#FF1B12"/>
+    <ellipse cx="112" cy="398" rx="112" ry="30" fill="#FF5A3C"/>
+  </g>
+</svg>

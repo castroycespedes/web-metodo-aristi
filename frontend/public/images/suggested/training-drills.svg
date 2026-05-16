@@ -1,0 +1,36 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#000"/>
+  <defs>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(780 120) rotate(119) scale(520 280)">
+      <stop stop-color="#F5F8F8" stop-opacity="0.8"/>
+      <stop offset="0.18" stop-color="#00F0EC" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#light)"/>
+  <path d="M0 570C210 520 420 502 600 512C810 524 970 500 1200 450" stroke="#00F0EC" stroke-opacity="0.24" stroke-width="3"/>
+  <path d="M0 690C250 620 492 606 702 616C884 624 1038 598 1200 560" stroke="#F5F8F8" stroke-opacity="0.12" stroke-width="2"/>
+  <g transform="translate(520 145)">
+    <ellipse cx="192" cy="520" rx="210" ry="24" fill="#00F0EC" opacity="0.16" filter="url(#glow)"/>
+    <circle cx="180" cy="58" r="44" fill="#0B1212"/>
+    <path d="M148 112C195 96 243 106 276 138L238 292C202 306 158 303 128 286L112 156C118 134 129 120 148 112Z" fill="#081010"/>
+    <path d="M160 132H226L194 234L160 132Z" fill="#00F0EC"/>
+    <path d="M120 158L70 286L32 365" stroke="#081010" stroke-width="34" stroke-linecap="round"/>
+    <path d="M266 150L352 248L420 285" stroke="#081010" stroke-width="34" stroke-linecap="round"/>
+    <path d="M132 288L98 426L54 548" stroke="#081010" stroke-width="42" stroke-linecap="round"/>
+    <path d="M230 288L288 424L374 530" stroke="#081010" stroke-width="42" stroke-linecap="round"/>
+    <path d="M54 548L14 550" stroke="#00F0EC" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M374 530L424 512" stroke="#00F0EC" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/>
+    <circle cx="480" cy="502" r="54" fill="#EAF0F0"/>
+    <path d="M480 450L498 484L536 491L508 517L514 556L480 538L446 556L452 517L424 491L462 484L480 450Z" fill="#050808"/>
+  </g>
+  <g opacity="0.85">
+    <path d="M170 570H250L230 630H150L170 570Z" fill="#00F0EC"/>
+    <path d="M328 546H408L388 606H308L328 546Z" fill="#00F0EC" opacity="0.7"/>
+    <path d="M270 642H350L330 702H250L270 642Z" fill="#00F0EC" opacity="0.5"/>
+  </g>
+</svg>
