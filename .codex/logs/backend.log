@@ -218,3 +218,264 @@
 [Nest] 13576  - 16/05/2026, 1:23:49 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +0ms
 [Nest] 13576  - 16/05/2026, 1:23:49 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +2ms
 [Nest] 13576  - 16/05/2026, 1:23:49 p.m.     LOG [NestApplication] Nest application successfully started +3ms
+[2J[3J[H[[90m1:26:35 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:26:36 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:26:39 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:26:40 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:26:40 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:26:41 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:26:42 p.m.[0m] File change detected. Starting incremental compilation...
+
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +15ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +0ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +1ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +86ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +7ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +2ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +4ms
+[Nest] 24048  - 16/05/2026, 1:26:43 p.m.     LOG [NestApplication] Nest application successfully started +3ms
+[[90m1:26:43 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:26:43 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:26:44 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +51ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +1ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +0ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +80ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +4ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +1ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +2ms
+[Nest] 6232  - 16/05/2026, 1:26:46 p.m.     LOG [NestApplication] Nest application successfully started +5ms
+[2J[3J[H[[90m1:26:49 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:26:50 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:26:50 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:26:51 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +19ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +4ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +2ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +0ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +59ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +8ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +1ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +4ms
+[Nest] 28792  - 16/05/2026, 1:26:52 p.m.     LOG [NestApplication] Nest application successfully started +4ms
+[2J[3J[H[[90m1:27:13 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:27:14 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +23ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +3ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +1ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +78ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +11ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +2ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +2ms
+[Nest] 28612  - 16/05/2026, 1:27:15 p.m.     LOG [NestApplication] Nest application successfully started +6ms
+[2J[3J[H[[90m1:27:44 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:27:46 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 21832  - 16/05/2026, 1:27:48 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 21832  - 16/05/2026, 1:27:48 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +15ms
+[Nest] 21832  - 16/05/2026, 1:27:48 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[Nest] 21832  - 16/05/2026, 1:27:48 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +1ms
+[Nest] 21832  - 16/05/2026, 1:27:48 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +0ms
+[Nest] 21832  - 16/05/2026, 1:27:48 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 21832  - 16/05/2026, 1:27:49 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +44ms
+[Nest] 21832  - 16/05/2026, 1:27:49 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +6ms
+[Nest] 21832  - 16/05/2026, 1:27:49 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +0ms
+[Nest] 21832  - 16/05/2026, 1:27:49 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +2ms
+[Nest] 21832  - 16/05/2026, 1:27:49 p.m.     LOG [NestApplication] Nest application successfully started +5ms
+[2J[3J[H[[90m1:27:52 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:27:52 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +14ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +3ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +0ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +1ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +40ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +7ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +2ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +1ms
+[Nest] 3696  - 16/05/2026, 1:27:54 p.m.     LOG [NestApplication] Nest application successfully started +4ms
+[2J[3J[H[[90m1:28:05 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:28:06 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +15ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +0ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +0ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +46ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +5ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +2ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +3ms
+[Nest] 1292  - 16/05/2026, 1:28:08 p.m.     LOG [NestApplication] Nest application successfully started +3ms
+[2J[3J[H[[90m1:28:40 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:28:41 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:28:41 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:28:42 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +59ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +4ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +2ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +3ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +209ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +19ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +28ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +6ms
+[Nest] 21616  - 16/05/2026, 1:28:46 p.m.     LOG [NestApplication] Nest application successfully started +12ms
+[2J[3J[H[[90m1:28:54 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:28:54 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:28:56 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:28:56 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:28:57 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:28:58 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:28:59 p.m.[0m] File change detected. Starting incremental compilation...
+
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +19ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +2ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +3ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +42ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +10ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +1ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +4ms
+[Nest] 23976  - 16/05/2026, 1:28:59 p.m.     LOG [NestApplication] Nest application successfully started +3ms
+[[90m1:29:00 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +27ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +47ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +1ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +1ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +109ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +4ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +3ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +3ms
+[Nest] 30840  - 16/05/2026, 1:29:02 p.m.     LOG [NestApplication] Nest application successfully started +5ms
+[2J[3J[H[[90m1:33:00 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:33:01 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:33:01 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:33:02 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:33:04 p.m.[0m] File change detected. Starting incremental compilation...
+
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +20ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +0ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +1ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +61ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +6ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +4ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +4ms
+[Nest] 34104  - 16/05/2026, 1:33:04 p.m.     LOG [NestApplication] Nest application successfully started +4ms
+[[90m1:33:04 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +15ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +1ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +0ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +51ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +4ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +3ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +1ms
+[Nest] 32840  - 16/05/2026, 1:33:06 p.m.     LOG [NestApplication] Nest application successfully started +6ms
+[2J[3J[H[[90m1:33:34 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:33:34 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +15ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +1ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +0ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +41ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +6ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +0ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +2ms
+[Nest] 27176  - 16/05/2026, 1:33:36 p.m.     LOG [NestApplication] Nest application successfully started +6ms
+[2J[3J[H[[90m1:33:55 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:33:56 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:33:57 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:33:58 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +15ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +1ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +0ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +43ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +4ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +2ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +2ms
+[Nest] 28944  - 16/05/2026, 1:33:59 p.m.     LOG [NestApplication] Nest application successfully started +3ms
+[2J[3J[H[[90m1:34:07 p.m.[0m] File change detected. Starting incremental compilation...
+
+[[90m1:34:08 p.m.[0m] Found 0 errors. Watching for file changes.
+
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [NestFactory] Starting Nest application...
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [InstanceLoader] AppModule dependencies initialized +16ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [InstanceLoader] HealthModule dependencies initialized +0ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [InstanceLoader] ContactModule dependencies initialized +3ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [RoutesResolver] HealthController {/api/health}: +47ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [RouterExplorer] Mapped {/api/health, GET} route +6ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [RoutesResolver] ContactController {/api/contact}: +2ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [RouterExplorer] Mapped {/api/contact, POST} route +2ms
+[Nest] 33076  - 16/05/2026, 1:34:10 p.m.     LOG [NestApplication] Nest application successfully started +4ms
