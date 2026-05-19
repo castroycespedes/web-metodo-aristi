@@ -1,549 +1,387 @@
+import Image from 'next/image';
 import {
   ArrowRight,
-  Brain,
-  CheckCircle2,
-  Crosshair,
+  CalendarCheck,
   Dumbbell,
+  Frown,
+  Goal,
   Instagram,
-  Lightbulb,
-  Medal,
   MessageCircle,
-  Shield,
-  Target,
+  ShieldCheck,
+  Sparkles,
   Trophy,
-  Users
-} from "lucide-react";
-import Image from "next/image";
-import { ContactForm } from "@/components/sections/contact-form";
-import { TestimonialsSlider } from "@/components/sections/testimonials-slider";
-import { ButtonLink } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Container } from "@/components/ui/container";
-import { SectionTitle } from "@/components/ui/section-title";
-import { getWhatsAppUrl, siteConfig } from "@/lib/site";
+  Users,
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { LandingHeader } from '@/components/landing/landing-header';
 
-const benefits = [
+const accent = 'text-primary cyan-glow';
+const whatsappUrl =
+  'https://wa.me/3022243805?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20entrenamientos';
+
+const problems = [
   {
-    title: "Tecnica",
-    description: "Dominio del balon, controles, perfiles y recursos para resolver bajo presion.",
-    icon: Target
+    icon: MessageCircle,
+    title: 'Tu hijo entrena, pero no destaca.',
   },
   {
-    title: "Mentalidad",
-    description: "Entrenamos enfoque, resiliencia y capacidad para competir sin miedo.",
-    icon: Brain
+    icon: Frown,
+    title: 'Le falta confianza con el balon.',
   },
   {
-    title: "Creatividad",
-    description: "Situaciones abiertas para decidir, improvisar y entender el juego.",
-    icon: Lightbulb
+    icon: Dumbbell,
+    title: 'Tiene miedo de equivocarse.',
   },
   {
-    title: "Disciplina",
-    description: "Rutinas simples, exigentes y repetibles para construir habitos ganadores.",
-    icon: Crosshair
+    icon: Goal,
+    title: 'En los partidos desaparece.',
   },
   {
-    title: "Liderazgo",
-    description: "Formamos jugadores que comunican, ordenan y elevan a su equipo.",
-    icon: Medal
+    icon: Trophy,
+    title: 'No se atreve a encarar.',
   },
   {
-    title: "Confianza",
-    description: "Cada sesion busca que el jugador se atreva a intentar y vuelva a creer.",
-    icon: Shield
-  }
+    icon: Users,
+    title: 'La escuela tradicional no trabaja detalles tecnicos.',
+  },
 ];
 
-const trainingPoints = [
-  "Diagnostico del nivel tecnico y coordinativo",
-  "Ejercicios progresivos con balon y oposicion",
-  "Toma de decisiones en situaciones reales",
-  "Seguimiento de confianza, disciplina y caracter",
-  "Sesiones adaptadas por edad, objetivo y posicion"
+const methodItems = [
+  'Entrenamientos especializados con balon',
+  'Desarrollo de tecnica individual',
+  'Mentalidad ganadora y confianza',
+  'Ambiente positivo y motivador',
+  'Entrenadores capacitados y apasionados',
 ];
 
-const values = [
+const steps = [
   {
-    title: "Mision",
-    description: "Llegar a ser entrenador en un gran club y dejar huella en el futbol.",
-    icon: Trophy
+    number: '1',
+    title: 'Agenda tu clase de prueba',
+    text: 'Elige el dia y horario que mejor te convenga.',
+    icon: CalendarCheck,
   },
   {
-    title: "Vision",
-    description: "Construir la escuela de futbol mas influyente y respetada.",
-    icon: Dumbbell
+    number: '2',
+    title: 'Evaluamos su nivel',
+    text: 'Revisamos tecnica, y mental del jugador para crear su plan de trabajo.',
+    icon: ShieldCheck,
   },
   {
-    title: "Valores",
-    description: "Pasion, compromiso, disciplina y amor por el desarrollo.",
-    icon: Users
-  }
+    number: '3',
+    title: 'Entrenamos para su transformacion',
+    text: 'Entrenamientos enfocados en tecnica, confianza, y mentalidad para que jueguen sin miedo.',
+    icon: Dumbbell,
+  },
 ];
 
 const testimonials = [
   {
     quote:
-      "Mi hijo ha mejorado su tecnica y su confianza increiblemente. Ahora disfruta mas el futbol y se atreve a intentarlo.",
-    author: "Papa de Mateo",
-    role: "Jugador de 11 anos"
+      'Desde que mi hijo entrena aqui se le nota mas seguro. Ahora disfruta cada partido y se atreve a mas.',
+    name: 'Paola G.',
+    role: 'Mama de Santiago, 10 anos',
   },
   {
     quote:
-      "El Metodo Aristi no solo mejora jugadores, tambien forma su mente. Mi hijo es mas disciplinado y seguro.",
-    author: "Mama de Emiliano",
-    role: "Jugador de 13 anos"
+      'El metodo es diferente. No solo ensenan a tocar el balon, tambien a pensar y competir mejor.',
+    name: 'Andres M.',
+    role: 'Papa de Mateo, 12 anos',
   },
   {
     quote:
-      "Los entrenamientos son exigentes, dinamicos y diferentes. Se nota la pasion y la experiencia en cada sesion.",
-    author: "Papa de Santiago",
-    role: "Jugador de 10 anos"
+      'Mi hijo era muy timido. Hoy juega con mas tecnica, mas seguridad y mas alegria.',
+    name: 'Carolina R.',
+    role: 'Mama de Emiliano, 9 anos',
   },
-  {
-    quote:
-      "Aprendi a controlar mejor el balon y a tomar decisiones mas rapido. Ahora entro a la cancha con mas confianza.",
-    author: "Samuel",
-    role: "Jugador de 12 anos"
-  },
-  {
-    quote:
-      "Nos gusta que cada sesion tenga una intencion. No es entrenar por entrenar, es formar habitos.",
-    author: "Mama de Luciana",
-    role: "Jugadora de 9 anos"
-  }
 ];
 
-const trainingImages = [
-  {
-    title: "Tecnica con balon",
-    description: "Controles, perfiles, conduccion y recursos para jugar bajo presion.",
-    src: "/images/provided/cones-ball-drill.svg"
-  },
-  {
-    title: "Coordinacion",
-    description: "Circuitos de pies, cambios de ritmo y movimiento con balon.",
-    src: "/images/suggested/coordination-session.svg"
-  },
-  {
-    title: "Decision en juego",
-    description: "Situaciones reales para decidir rapido, crear ventaja y competir.",
-    src: "/images/suggested/game-decision.svg"
-  }
+const trainingGallery = [
+  { title: 'Tecnica individual', position: '18% center' },
+  { title: 'Control y conduccion', position: '34% center' },
+  { title: 'Coordinacion con balon', position: '50% center' },
+  { title: 'Mentalidad competitiva', position: '66% center' },
+  { title: 'Entrenamiento personalizado', position: '82% center' },
+  { title: 'Confianza en cancha', position: '95% center' },
 ];
 
-const galleryItems = [
-  {
-    title: "Charla tecnica",
-    description: "Preparacion mental antes de entrar al campo.",
-    src: "/images/provided/coach-kids-session.svg",
-    size: "h-[460px]"
-  },
-  {
-    title: "Conduccion con conos",
-    description: "Control de balon, ritmo y precision.",
-    src: "/images/provided/cones-ball-drill.svg",
-    size: "h-[560px]"
-  },
-  {
-    title: "Coordinacion",
-    description: "Circuitos para pies rapidos y dominio corporal.",
-    src: "/images/suggested/coordination-session.svg",
-    size: "h-[420px]"
-  },
-  {
-    title: "Decision en juego",
-    description: "Acciones con lectura, ventaja y atrevimiento.",
-    src: "/images/suggested/game-decision.svg",
-    size: "h-[520px]"
-  },
-  {
-    title: "Tecnica individual",
-    description: "Recursos para competir bajo presion.",
-    src: "/images/suggested/technique-session.svg",
-    size: "h-[440px]"
-  },
-  {
-    title: "Entrenamiento guiado",
-    description: "Metodo, correccion y proposito en cada sesion.",
-    src: "/images/provided/coach-kids-session.svg",
-    size: "h-[500px]"
-  }
-];
-
-export default function HomePage() {
+export default function LandingPage() {
   return (
-    <>
-      <section className="relative isolate min-h-screen overflow-hidden bg-brand-black text-brand-white">
+    <main className="min-h-screen bg-[#07080a] text-white">
+      <LandingHeader />
+      <section className="relative min-h-[760px] overflow-hidden">
         <Image
-          src="/images/hero-aristi.svg"
-          alt="Jugador entrenando futbol de noche con iluminacion neon"
+          src="/images/football-training.jpg"
+          alt="Entrenamiento de futbol para ninos"
           fill
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(1,3,3,0.95)_0%,rgba(1,3,3,0.82)_35%,rgba(1,3,3,0.36)_68%,rgba(1,3,3,0.72)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_18%,rgba(0,229,229,0.18),transparent_30%),linear-gradient(180deg,rgba(1,3,3,0.22),#010303_98%)]" />
-        <div className="absolute left-0 top-[18%] h-72 w-px bg-brand-cyan/60 shadow-glow md:left-[47%]" />
-        <div className="absolute bottom-16 right-8 hidden w-36 animate-float border-l border-brand-cyan/45 pl-5 lg:block">
-          <p className="font-display text-4xl leading-none neon-text">Juega sin miedo.</p>
-          <p className="mt-3 text-xs font-black uppercase leading-5 tracking-wide text-brand-white/68">
-            Entrena con proposito.
-          </p>
-        </div>
-
-        <Container className="relative z-10 flex min-h-screen items-center pb-16 pt-28 md:pb-20 md:pt-32">
-          <div className="max-w-4xl animate-float">
-            <p className="mb-5 text-[0.72rem] font-black uppercase tracking-[0.34em] text-brand-cyan sm:text-xs">
-              Metodo Aristi
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07080a] via-transparent to-black/50" />
+        <div className="relative mx-auto flex min-h-[760px] max-w-7xl items-center px-5 py-28 sm:px-8 lg:px-10">
+          <div className="max-w-2xl">
+            <p className="mb-4 text-xs font-black uppercase tracking-[0.35em] text-primary">
+              Metodo aristi
             </p>
-            <h1 className="font-display text-6xl leading-[0.88] tracking-normal sm:text-7xl md:text-8xl lg:text-9xl">
-              Formamos jugadores
-              <span className="block neon-text">tecnicos, creativos</span>
-              y sin miedo.
+            <h1 className="floating-title text-5xl font-black uppercase leading-[0.95] tracking-normal sm:text-6xl lg:text-7xl">
+              Formamos jugadores tecnicos, creativos y seguros para competir{' '}
+              <span className={accent}>sin miedo.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-brand-white/78 sm:text-base md:text-lg md:leading-8">
-              Entrenamientos con balon y coordinacion para desarrollar jugadores que se atreven,
-              deciden y marcan la diferencia.
+            <p className="mt-6 max-w-lg text-base font-medium leading-7 text-white/85">
+              En el Metodo Aristi Desarrollamos tecnica, confianza y mentalidad mediante
+              entrenamientos especializados con balon.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink
-                href={getWhatsAppUrl()}
-                target="_blank"
-                rel="noreferrer"
-                size="lg"
-                icon={<MessageCircle size={18} />}
-                className="animate-pulse-glow"
-              >
-                Agenda tu clase
-              </ButtonLink>
-              <ButtonLink
-                href={siteConfig.instagramUrl}
-                target="_blank"
-                rel="noreferrer"
-                variant="outline"
-                size="lg"
-                icon={<Instagram size={18} />}
-              >
-                Instagram
-              </ButtonLink>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                <Button size="lg" className="h-12 w-full rounded-md px-6 font-black uppercase sm:w-auto">
+                  <CalendarCheck className="h-4 w-4" />
+                  Agenda una clase de prueba
+                </Button>
+              </a>
+              <a href="https://www.instagram.com/metodoaristi" target="_blank" rel="noreferrer">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-12 w-full rounded-md px-6 font-black uppercase sm:w-auto"
+                >
+                  <Instagram className="h-4 w-4" />
+                  Instagram
+                </Button>
+              </a>
             </div>
-            <p className="mt-4 text-xs text-brand-steel">Clases para ninos y jovenes de 6 a 18 anos</p>
-          </div>
-        </Container>
-      </section>
-
-      <section id="beneficios" className="relative overflow-hidden border-y border-brand-line bg-brand-graphite py-20">
-        <div className="absolute inset-0 bg-field-lines bg-[length:76px_76px] opacity-35" />
-        <div className="absolute left-1/2 top-0 h-64 w-[70%] -translate-x-1/2 bg-[radial-gradient(circle,rgba(0,240,236,0.14),transparent_68%)]" />
-        <Container className="relative">
-          <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-            <SectionTitle
-              eyebrow="Beneficios"
-              title="No solo entrenamos futbol,"
-              accent="formamos caracter."
-              description="La metodologia combina tecnica, toma de decisiones y formacion personal para que cada jugador compita con identidad."
-            />
-            <p className="max-w-2xl text-sm leading-7 text-brand-steel lg:justify-self-end">
-              Cada card representa un eje de trabajo dentro del Metodo Aristi. El objetivo es que
-              el jugador mejore con el balon, pero tambien aprenda a liderar, confiar y sostener
-              su disciplina.
+            <p className="mt-3 text-xs font-semibold text-white/65">
+              Clases para ninos de 6 a 16 anos
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-
+      <section className="border-y border-white/10 bg-[#0b0c0f] px-5 py-14 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl text-center">
+          <p className="text-xs font-black uppercase tracking-[0.32em] text-primary">
+            Entendemos lo que vives
+          </p>
+          <h2 className="mt-3 text-2xl font-black uppercase tracking-normal sm:text-3xl">
+            Te identificas con alguno de estos problemas?
+          </h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-6">
+            {problems.map((problem) => {
+              const Icon = problem.icon;
               return (
-                <Card
-                  key={benefit.title}
-                  className="group brand-scan min-h-60 animate-card-rise overflow-hidden p-6 hover:-translate-y-2 hover:shadow-glow-strong"
-                  style={{ animationDelay: `${index * 90}ms` }}
-                >
-                  <div className="relative z-10 flex h-full flex-col justify-between">
-                    <div>
-                      <div className="mb-7 flex items-center justify-between">
-                        <span className="grid h-14 w-14 place-items-center rounded-sm border border-brand-cyan/45 bg-brand-cyan/10 text-brand-cyan shadow-glow transition duration-300 group-hover:scale-110 group-hover:bg-brand-cyan group-hover:text-brand-black">
-                          <Icon size={28} strokeWidth={1.8} />
-                        </span>
-                        <span className="font-display text-6xl leading-none text-brand-cyan/16 transition group-hover:text-brand-cyan/32">
-                          0{index + 1}
-                        </span>
-                      </div>
-                      <h3 className="font-display text-4xl leading-none text-brand-white">
-                        {benefit.title}
-                      </h3>
-                      <p className="mt-4 text-sm leading-6 text-brand-steel">{benefit.description}</p>
-                    </div>
-                    <div className="mt-8 h-px w-full bg-gradient-to-r from-brand-cyan via-brand-cyan/35 to-transparent opacity-60 transition group-hover:opacity-100" />
-                  </div>
-                </Card>
+                <div key={problem.title} className="flex flex-col items-center gap-3">
+                  <Icon className="h-10 w-10 text-primary" strokeWidth={1.7} />
+                  <p className="max-w-36 text-sm font-semibold leading-5 text-white/80">
+                    {problem.title}
+                  </p>
+                </div>
               );
             })}
           </div>
-        </Container>
+          <p className="mt-10 text-lg font-black">
+            No estas solo. Y tiene solucion.
+          </p>
+          <p className="mt-1 text-base font-bold text-primary">
+            Estamos aqui para ayudarlo a cambiar su juego y su mentalidad.
+          </p>
+        </div>
       </section>
 
-      <section id="metodo" className="relative overflow-hidden bg-dark-section py-24">
-        <div className="absolute inset-0 bg-field-lines bg-[length:90px_90px] opacity-25" />
-        <Container className="relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div className="scroll-reveal relative min-h-[520px] overflow-hidden rounded-sm border border-brand-line bg-brand-graphite shadow-soft">
+      <section id="metodo" className="bg-white px-5 py-16 text-black sm:px-8 lg:px-10">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative min-h-[360px] overflow-hidden border border-black/10 shadow-[0_24px_80px_rgba(0,0,0,0.16)]">
             <Image
-              src="/images/provided/coach-kids-session.svg"
-              alt="Entrenador explicando metodologia a jugadores jovenes"
+              src="/images/football-training.jpg"
+              alt="Metodo de entrenamiento"
               fill
-              className="object-cover transition duration-700 hover:scale-105"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.14),rgba(0,0,0,0.72)),linear-gradient(180deg,transparent,rgba(0,0,0,0.78))]" />
-            <div className="absolute bottom-7 left-7 right-7">
-              <div className="mb-4 h-px w-28 bg-brand-cyan shadow-glow" />
-              <p className="max-w-md font-display text-5xl leading-none text-brand-white">
-                Entrenar con
-                <span className="block neon-text">proposito claro.</span>
-              </p>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
           </div>
-
-          <div className="scroll-reveal">
-            <SectionTitle
-              eyebrow="Sobre el metodo"
-              title="Metodo deportivo"
-              accent="con estructura."
-              description="La metodologia combina tecnica individual, coordinacion, toma de decisiones y mentalidad competitiva. Cada entrenamiento tiene un objetivo claro y una progresion medible."
-            />
-            <ul className="mt-8 grid gap-3">
-              {trainingPoints.map((point) => (
-                <li
-                  key={point}
-                  className="group flex items-start gap-3 rounded-sm border border-brand-line bg-white/[0.025] p-4 text-sm text-brand-white/78 transition hover:border-brand-cyan/55 hover:bg-brand-cyan/5 hover:shadow-glow"
-                >
-                  <CheckCircle2
-                    size={18}
-                    className="mt-0.5 shrink-0 text-brand-cyan transition group-hover:scale-110"
-                  />
-                  {point}
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.32em] text-primary">
+              Nuestro metodo
+            </p>
+            <h2 className="floating-title mt-3 text-4xl font-black uppercase leading-none tracking-normal text-black sm:text-5xl">
+              Mas que entrenamientos, formamos jugadores que juegan{' '}
+              <span className="text-primary cyan-glow">sin miedo.</span>
+            </h2>
+            <p className="mt-5 text-sm font-semibold leading-6 text-black/68">
+              Nuestro enfoque combina tecnica, creatividad, inteligencia de juego y mentalidad para
+              desarrollar jugadores completos dentro y fuera de la cancha.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {methodItems.map((item) => (
+                <li key={item} className="flex items-center gap-3 text-sm font-black text-black/80">
+                  <Sparkles className="h-4 w-4 text-primary" />
+                  {item}
                 </li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink
-                href={getWhatsAppUrl()}
-                target="_blank"
-                rel="noreferrer"
-                icon={<MessageCircle size={18} />}
-              >
-                Agenda tu clase
-              </ButtonLink>
-              <ButtonLink href="#galeria" variant="outline" icon={<ArrowRight size={17} />}>
-                Ver entrenamientos
-              </ButtonLink>
-            </div>
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex">
+              <Button className="rounded-md font-black uppercase">Conoce mas sobre nuestro metodo</Button>
+            </a>
           </div>
-        </Container>
+        </div>
       </section>
 
-      <section id="sobre-mi" className="border-y border-brand-line bg-brand-black py-20">
-        <Container className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-          <div className="relative min-h-[420px] overflow-hidden rounded-sm bg-brand-graphite">
-            <Image
-              src="/images/provided/coach-kids-session.svg"
-              alt="Entrenador reunido con jugadores jovenes en cancha"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.74))]" />
-            <div className="absolute bottom-8 left-8 right-8 h-px bg-brand-cyan/65 shadow-glow" />
-          </div>
-          <div>
-            <SectionTitle
-              eyebrow="Mas que un entrenador"
-              title="Soy un formador"
-              accent="de suenos."
-              description="Mi mision es ayudar a cada jugador a crecer con identidad, confianza y disciplina. Cada sesion busca formar criterio, caracter y amor por el juego."
-            />
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {values.map((value) => {
-                const Icon = value.icon;
-
-                return (
-                  <Card key={value.title} className="p-5">
-                    <Icon className="text-brand-cyan" size={28} />
-                    <h3 className="mt-4 font-display text-3xl text-brand-white">{value.title}</h3>
-                    <p className="mt-2 text-xs leading-5 text-brand-steel">{value.description}</p>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section id="galeria" className="relative overflow-hidden bg-brand-black py-24">
-        <div className="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_50%_0%,rgba(0,240,236,0.16),transparent_62%)]" />
-        <Container>
-          <div className="scroll-reveal mb-12 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-            <SectionTitle
-              eyebrow="Galeria de entrenamientos"
-              title="Sesiones con balon,"
-              accent="ritmo y proposito."
-              description="Un recorrido visual por la energia del Metodo Aristi: tecnica, coordinacion, decision y formacion en cancha."
-            />
-            <p className="max-w-2xl text-sm leading-7 text-brand-steel lg:justify-self-end">
-              Cada imagen muestra un momento clave del proceso: correccion, repeticion,
-              intensidad y confianza para competir con personalidad.
-            </p>
-          </div>
-
-          <div className="columns-1 gap-5 md:columns-2 xl:columns-3">
-            {galleryItems.map((item, index) => (
-              <article
-                key={item.title}
-                className={`scroll-reveal group relative mb-5 break-inside-avoid overflow-hidden rounded-sm border border-brand-line bg-brand-graphite shadow-soft transition duration-500 hover:-translate-y-2 hover:border-brand-cyan/70 hover:shadow-glow-strong ${item.size}`}
-                style={{ animationDelay: `${index * 80}ms` }}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.description}
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.32)_45%,rgba(0,0,0,0.94)_100%)] transition duration-500 group-hover:bg-[linear-gradient(180deg,rgba(0,240,236,0.08)_0%,rgba(0,0,0,0.28)_42%,rgba(0,0,0,0.95)_100%)]" />
-                <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-                  <div className="absolute inset-x-0 top-0 h-px bg-brand-cyan shadow-glow" />
-                  <div className="absolute inset-y-0 right-0 w-px bg-brand-cyan/70 shadow-glow" />
+      <section id="funciona" className="border-y border-white/10 bg-[#090a0d] px-5 py-14 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-center text-xs font-black uppercase tracking-[0.32em] text-primary">
+            Asi es como funciona
+          </p>
+          <h2 className="floating-title mt-3 text-center text-3xl font-black uppercase tracking-normal">
+            Un proceso simple, efectivo y personalizado
+          </h2>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {steps.map((step) => {
+              const Icon = step.icon;
+              return (
+                <div key={step.number} className="flex gap-5 border border-white/10 bg-white/[0.03] p-6">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/15">
+                    <Icon className="h-7 w-7 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-5xl font-black leading-none text-primary">{step.number}</p>
+                    <h3 className="mt-2 text-base font-black uppercase">{step.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-white/65">{step.text}</p>
+                  </div>
                 </div>
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <div className="mb-4 h-px w-20 bg-brand-cyan shadow-glow transition group-hover:w-32" />
-                  <h3 className="font-display text-4xl leading-none text-brand-white">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-brand-steel">{item.description}</p>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios" className="bg-[#f3f4f6] px-5 py-16 text-black sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-center text-xs font-black uppercase tracking-[0.32em] text-primary">
+            Lo que dicen los padres
+          </p>
+          <h2 className="mt-3 text-center text-3xl font-black uppercase tracking-normal">
+            Historias reales, resultados reales
+          </h2>
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <article key={testimonial.name} className="border bg-white p-6 shadow-sm">
+                <p className="text-4xl font-black leading-none text-primary">"</p>
+                <p className="mt-2 text-sm font-semibold leading-6 text-black/70">
+                  {testimonial.quote}
+                </p>
+                <div className="mt-5 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-sm font-black text-white">
+                    {testimonial.name.slice(0, 1)}
+                  </div>
+                  <div>
+                    <p className="text-sm font-black">{testimonial.name}</p>
+                    <p className="text-xs text-black/55">{testimonial.role}</p>
+                  </div>
                 </div>
               </article>
             ))}
           </div>
-        </Container>
+        </div>
       </section>
 
-      <section id="testimonios" className="relative overflow-hidden bg-brand-graphite py-24">
-        <div className="absolute inset-0 bg-field-lines bg-[length:80px_80px] opacity-25" />
-        <div className="absolute left-1/2 top-0 h-72 w-[72%] -translate-x-1/2 bg-[radial-gradient(circle,rgba(0,240,236,0.16),transparent_70%)]" />
-        <Container>
-          <SectionTitle
-            align="center"
-            eyebrow="Testimonios"
-            title="Confianza de padres"
-            accent="y jugadores."
-            description="Historias de progreso, disciplina y seguridad dentro del proceso Metodo Aristi."
-            className="relative max-w-2xl"
-          />
-          <div className="relative mt-12">
-            <TestimonialsSlider testimonials={testimonials} />
-          </div>
-        </Container>
-      </section>
-
-      <section id="entrenamientos" className="bg-brand-black py-20">
-        <Container className="grid gap-10 lg:grid-cols-[0.62fr_1.38fr] lg:items-center">
-          <SectionTitle
-            title="Hoy entrenas."
-            accent="Manana lideras."
-            description="Cada entrenamiento te acerca a tu mejor version como jugador y como persona."
-          />
-          <div className="grid gap-4 sm:grid-cols-3">
-            {trainingImages.map((item, index) => (
-              <div
+      <section id="galeria" className="bg-black px-5 py-16 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-center text-xs font-black uppercase tracking-[0.32em] text-primary">
+            Viven y crecen
+          </p>
+          <h2 className="floating-title mt-3 text-center text-3xl font-black uppercase tracking-normal">
+            Entrenan, compiten y juegan sin miedo
+          </h2>
+          <div className="mt-9 flex snap-x gap-4 overflow-x-auto pb-4 [scrollbar-color:#00E5FF_#111]">
+            {trainingGallery.map((item) => (
+              <article
                 key={item.title}
-                className="relative min-h-64 overflow-hidden rounded-sm border border-brand-line bg-brand-graphite p-5"
+                className="group relative h-72 min-w-[82%] snap-center overflow-hidden border border-white/10 bg-[#0B1220] sm:min-w-[46%] lg:min-w-[31%]"
               >
                 <Image
-                  src={item.src}
-                  alt={`${item.title} en entrenamiento Metodo Aristi`}
+                  src="/images/football-training.jpg"
+                  alt={item.title}
                   fill
-                  className="object-cover"
+                  sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 82vw"
+                  className="object-cover transition duration-500 group-hover:scale-110"
+                  style={{ objectPosition: item.position }}
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.86))]" />
-                <div className="relative flex h-full flex-col justify-between">
-                  <span className="font-display text-7xl text-brand-cyan/30">0{index + 1}</span>
-                  <h3 className="font-display text-4xl leading-none text-brand-white">{item.title}</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.25em] text-primary">
+                    Halcones
+                  </p>
+                  <h3 className="mt-2 text-2xl font-black uppercase leading-none">{item.title}</h3>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
-        </Container>
+        </div>
       </section>
 
-      <section id="contacto" className="relative isolate min-h-screen overflow-hidden bg-brand-black py-24">
+      <section className="relative overflow-hidden border-t border-white/10">
         <Image
-          src="/images/provided/cones-ball-drill.svg"
-          alt="Entrenamiento de futbol con balon y conos"
+          src="/images/football-training.jpg"
+          alt="Clase de prueba"
           fill
-          className="object-cover"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.94),rgba(0,0,0,0.62),rgba(0,0,0,0.9)),linear-gradient(180deg,rgba(0,0,0,0.34),#000)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(0,240,236,0.16),transparent_34%)]" />
-        <Container className="relative z-10 flex min-h-[calc(100vh-12rem)] items-center">
-          <div className="scroll-reveal max-w-5xl">
-            <p className="mb-5 text-xs font-black uppercase tracking-[0.34em] text-brand-cyan">
-              Tu momento es ahora
-            </p>
-            <h2 className="font-display text-6xl leading-[0.88] text-brand-white sm:text-7xl lg:text-9xl">
-              Hoy entrenas.
-              <span className="block neon-text">Manana lideras.</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/30" />
+        <div className="relative mx-auto grid min-h-[430px] max-w-7xl items-center gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_0.6fr] lg:px-10">
+          <div>
+            <h2 className="floating-title max-w-2xl text-4xl font-black uppercase leading-none tracking-normal sm:text-5xl">
+              Tu hijo puede jugar con mas tecnica,{' '}
+              <span className={accent}>confianza y valentia.</span>
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-brand-white/76">
-              Agenda una clase, conoce el proceso y empieza a construir una version mas tecnica,
-              segura y disciplinada dentro de la cancha.
+            <p className="mt-4 max-w-lg text-sm font-semibold leading-6 text-white/75">
+              Agenda hoy su clase de prueba y da el primer paso hacia su mejor version.
             </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <ButtonLink
-                href={getWhatsAppUrl()}
-                target="_blank"
-                rel="noreferrer"
-                size="lg"
-                icon={<MessageCircle size={22} />}
-                className="h-16 px-8 text-base"
-              >
-                Agenda tu clase
-              </ButtonLink>
-              <ButtonLink
-                href={siteConfig.instagramUrl}
-                target="_blank"
-                rel="noreferrer"
-                variant="outline"
-                size="lg"
-                icon={<Instagram size={22} />}
-                className="h-16 px-8 text-base"
-              >
-                Instagram
-              </ButtonLink>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                <Button size="lg" className="w-full rounded-md font-black uppercase sm:w-auto">
+                  <CalendarCheck className="h-4 w-4" />
+                  Agenda tu clase de prueba
+                </Button>
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                <Button size="lg" variant="outline" className="w-full rounded-md font-black uppercase sm:w-auto">
+                  Escribenos por WhatsApp
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </a>
             </div>
           </div>
-        </Container>
+          <div className="justify-self-center text-center lg:justify-self-end">
+            <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border-2 border-white">
+              <Trophy className="h-16 w-16" />
+            </div>
+            <p className="mt-4 text-3xl font-black uppercase">Metodo Aristi</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-white/70">
+              Escuela de futbol
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section id="contacto-info" className="bg-brand-black pb-20">
-        <Container>
-          <div className="relative overflow-hidden rounded-sm border border-brand-cyan/45 bg-brand-graphite p-8 shadow-glow md:p-10">
-            <div className="absolute inset-0 bg-neon-radial" />
-            <div className="relative grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-              <div>
-                <p className="text-[0.72rem] font-black uppercase tracking-[0.32em] text-brand-cyan">
-                  Formulario de contacto
-                </p>
-                <h2 className="mt-3 max-w-3xl font-display text-5xl leading-none text-brand-white sm:text-6xl">
-                  Cuéntanos sobre
-                  <span className="block neon-text">el jugador.</span>
-                </h2>
-                <p className="mt-5 max-w-xl text-sm leading-7 text-brand-steel">
-                  Deja tus datos y nos pondremos en contacto para orientarte sobre el entrenamiento
-                  ideal según edad, nivel y objetivo.
-                </p>
-              </div>
-              <ContactForm />
-            </div>
+      <footer className="border-t border-white/10 bg-black px-5 py-5 text-xs text-white/55 sm:px-8 lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p>2026 Metodo Aristi Escuela de Futbol. Todos los derechos reservados.</p>
+          <div className="flex items-center gap-5">
+            <a className="transition hover:text-primary" href="https://www.instagram.com/metodoaristi" aria-label="Instagram" target="_blank" rel="noreferrer">
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a className="transition hover:text-primary" href="https://www.tiktok.com/@metodoaristi" target="_blank" rel="noreferrer">TikTok</a>
+            <span>Politica de privacidad</span>
+            <span>Terminos y condiciones</span>
           </div>
-        </Container>
-      </section>
-    </>
+        </div>
+      </footer>
+      <a
+        href={whatsappUrl}
+        aria-label="WhatsApp"
+        className="fixed bottom-5 right-5 z-[70] flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--primary)/0.55)] transition hover:scale-105"
+      >
+        <MessageCircle className="h-7 w-7" />
+      </a>
+    </main>
   );
 }

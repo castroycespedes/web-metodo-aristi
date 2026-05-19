@@ -1,62 +1,35 @@
-import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
-import { Footer } from "@/components/layout/footer";
-import { Navbar } from "@/components/layout/navbar";
-import { WhatsAppFloatingButton } from "@/components/ui/whatsapp-floating-button";
-import { siteConfig } from "@/lib/site";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Bebas_Neue, Inter, Oswald } from 'next/font/google';
+import './globals.css';
 
-const display = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-display"
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-bebas',
 });
-
-const body = Inter({
-  subsets: ["latin"],
-  variable: "--font-body"
-});
+const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`
-  },
-  description: siteConfig.description,
-  keywords: [
-    "entrenamiento deportivo",
-    "metodo aristi",
-    "alto rendimiento",
-    "preparacion fisica",
-    "atletas"
-  ],
+  title: 'Metodo Aristi',
+  description:
+    'Escuela de futbol enfocada en tecnica, creatividad, confianza y mentalidad para jugadores jovenes.',
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    locale: "es_CO",
-    type: "website"
+    title: 'Metodo Aristi',
+    description:
+      'Entrenamientos especializados con balon para formar jugadores tecnicos, creativos y sin miedo.',
+    type: 'website',
+    locale: 'es_CO',
   },
-  robots: {
-    index: true,
-    follow: true
-  }
 };
 
 export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${display.variable} ${body.variable}`}>
-      <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppFloatingButton />
+    <html lang="es">
+      <body className={`${inter.variable} ${bebas.variable} ${oswald.variable}`}>
+        {children}
       </body>
     </html>
   );

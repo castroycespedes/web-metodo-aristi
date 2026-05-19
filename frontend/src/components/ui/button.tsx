@@ -1,68 +1,41 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
-import { ArrowRight } from "lucide-react";
-import { cn } from "@/lib/cn";
+import * as React from 'react';
+import { cn } from '@/lib/utils';
 
-type ButtonVariant = "primary" | "outline" | "ghost";
-type ButtonSize = "sm" | "md" | "lg";
+type ButtonVariant = 'default' | 'outline' | 'ghost';
+type ButtonSize = 'default' | 'lg' | 'icon';
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+}
 
 const variants: Record<ButtonVariant, string> = {
-  primary:
-    "bg-brand-cyan text-brand-black shadow-glow hover:bg-brand-cyanDark hover:shadow-glow-strong",
+  default: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
   outline:
-    "border border-brand-cyan/55 text-brand-cyan hover:bg-brand-cyan/10 hover:text-brand-white hover:shadow-glow",
-  ghost: "text-brand-white/72 hover:bg-white/5 hover:text-brand-cyan"
+    'border border-white/25 bg-white/5 text-white hover:border-primary hover:bg-primary/10 hover:text-primary',
+  ghost: 'text-white/75 hover:bg-white/10 hover:text-primary',
 };
 
 const sizes: Record<ButtonSize, string> = {
-  sm: "h-10 px-4 text-xs",
-  md: "h-12 px-5 text-sm",
-  lg: "h-14 px-6 text-sm"
+  default: 'h-10 px-4 py-2',
+  lg: 'h-12 px-6',
+  icon: 'h-10 w-10',
 };
 
-const baseClass =
-  "inline-flex items-center justify-center gap-2 rounded-sm font-extrabold uppercase tracking-wide transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-cyan";
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant = 'default', size = 'default', ...props }, ref) => (
+    <button
+      className={cn(
+        'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-black uppercase transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50',
+        variants[variant],
+        sizes[size],
+        className,
+      )}
+      ref={ref}
+      {...props}
+    />
+  ),
+);
 
-type CommonProps = {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  icon?: ReactNode;
-};
-
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & CommonProps;
-type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> &
-  CommonProps & {
-    href: string;
-  };
-
-export function Button({
-  className,
-  variant = "primary",
-  size = "md",
-  icon,
-  children,
-  ...props
-}: ButtonProps) {
-  return (
-    <button className={cn(baseClass, variants[variant], sizes[size], className)} {...props}>
-      {icon}
-      {children}
-    </button>
-  );
-}
-
-export function ButtonLink({
-  className,
-  variant = "primary",
-  size = "md",
-  icon,
-  children,
-  ...props
-}: ButtonLinkProps) {
-  return (
-    <a className={cn(baseClass, variants[variant], sizes[size], className)} {...props}>
-      {icon}
-      {children}
-      {!icon && variant === "primary" ? <ArrowRight size={17} /> : null}
-    </a>
-  );
-}
+Button.displayName = 'Button';

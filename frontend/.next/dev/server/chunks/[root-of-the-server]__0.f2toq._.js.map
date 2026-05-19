@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Castro%20Cespedes/metodo-aristi-web/frontend/src/app/api/contact/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\";\n\nconst backendUrl = process.env.BACKEND_API_URL ?? \"http://localhost:4000\";\n\nexport async function POST(request: Request) {\n  const payload = await request.json();\n  const response = await fetch(`${backendUrl}/api/contact`, {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: JSON.stringify(payload)\n  });\n\n  const data = await response.json();\n\n  return NextResponse.json(data, { status: response.status });\n}\n"],"names":["backendUrl","process","env","BACKEND_API_URL","POST","request","payload","json","response","fetch","method","headers","body","JSON","stringify","data","status"],"mappings":";;;;AAAA;;AAEA,MAAMA,aAAaC,QAAQC,GAAG,CAACC,eAAe,IAAI;AAE3C,eAAeC,KAAKC,OAAgB;IACzC,MAAMC,UAAU,MAAMD,QAAQE,IAAI;IAClC,MAAMC,WAAW,MAAMC,MAAM,GAAGT,WAAW,YAAY,CAAC,EAAE;QACxDU,QAAQ;QACRC,SAAS;YACP,gBAAgB;QAClB;QACAC,MAAMC,KAAKC,SAAS,CAACR;IACvB;IAEA,MAAMS,OAAO,MAAMP,SAASD,IAAI;IAEhC,OAAO,gJAAY,CAACA,IAAI,CAACQ,MAAM;QAAEC,QAAQR,SAASQ,MAAM;IAAC;AAC3D"}}]
-}
