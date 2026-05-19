@@ -16,5 +16,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "node"
-  }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "frontend"]
 }

@@ -1,10 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   ArrowRight,
   CalendarCheck,
   Dumbbell,
-  Facebook,
   Frown,
   Goal,
   Instagram,
@@ -18,11 +16,13 @@ import { Button } from '@/components/ui/button';
 import { LandingHeader } from '@/components/landing/landing-header';
 
 const accent = 'text-primary cyan-glow';
+const whatsappUrl =
+  'https://wa.me/3022243805?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20entrenamientos';
 
 const problems = [
   {
     icon: MessageCircle,
-    title: 'Entrena, pero no despega.',
+    title: 'Tu hijo entrena, pero no destaca.',
   },
   {
     icon: Frown,
@@ -64,13 +64,13 @@ const steps = [
   {
     number: '2',
     title: 'Evaluamos su nivel',
-    text: 'Revisamos tecnica, confianza y forma de competir.',
+    text: 'Revisamos tecnica, y mental del jugador para crear su plan de trabajo.',
     icon: ShieldCheck,
   },
   {
     number: '3',
-    title: 'Entrenamos para transformar',
-    text: 'Mejoramos habitos, mentalidad y rendimiento en cancha.',
+    title: 'Entrenamos para su transformacion',
+    text: 'Entrenamientos enfocados en tecnica, confianza, y mentalidad para que jueguen sin miedo.',
     icon: Dumbbell,
   },
 ];
@@ -96,6 +96,15 @@ const testimonials = [
   },
 ];
 
+const trainingGallery = [
+  { title: 'Tecnica individual', position: '18% center' },
+  { title: 'Control y conduccion', position: '34% center' },
+  { title: 'Coordinacion con balon', position: '50% center' },
+  { title: 'Mentalidad competitiva', position: '66% center' },
+  { title: 'Entrenamiento personalizado', position: '82% center' },
+  { title: 'Confianza en cancha', position: '95% center' },
+];
+
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-[#07080a] text-white">
@@ -113,29 +122,33 @@ export default function LandingPage() {
         <div className="relative mx-auto flex min-h-[760px] max-w-7xl items-center px-5 py-28 sm:px-8 lg:px-10">
           <div className="max-w-2xl">
             <p className="mb-4 text-xs font-black uppercase tracking-[0.35em] text-primary">
-              Metodo Aristi
+              Metodo aristi
             </p>
             <h1 className="floating-title text-5xl font-black uppercase leading-[0.95] tracking-normal sm:text-6xl lg:text-7xl">
               Formamos jugadores tecnicos, creativos y seguros para competir{' '}
               <span className={accent}>sin miedo.</span>
             </h1>
             <p className="mt-6 max-w-lg text-base font-medium leading-7 text-white/85">
-              Desarrollamos tecnica, confianza y mentalidad mediante
-              entrenamientos especializados con balon para ninos de 6 a 16 anos.
+              En el Metodo Aristi Desarrollamos tecnica, confianza y mentalidad mediante
+              entrenamientos especializados con balon.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="h-12 rounded-md px-6 font-black uppercase">
-                <CalendarCheck className="h-4 w-4" />
-                Agenda una clase de prueba
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="h-12 rounded-md border-white/25 bg-white/5 px-6 font-black uppercase text-white hover:bg-white/10 hover:text-white"
-              >
-                <Link href="/login">Entrar al sistema</Link>
-              </Button>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                <Button size="lg" className="h-12 w-full rounded-md px-6 font-black uppercase sm:w-auto">
+                  <CalendarCheck className="h-4 w-4" />
+                  Agenda una clase de prueba
+                </Button>
+              </a>
+              <a href="https://www.instagram.com/metodoaristi" target="_blank" rel="noreferrer">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-12 w-full rounded-md px-6 font-black uppercase sm:w-auto"
+                >
+                  <Instagram className="h-4 w-4" />
+                  Instagram
+                </Button>
+              </a>
             </div>
             <p className="mt-3 text-xs font-semibold text-white/65">
               Clases para ninos de 6 a 16 anos
@@ -174,40 +187,40 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="metodo" className="relative overflow-hidden text-white">
-        <Image
-          src="/images/football-training.jpg"
-          alt="Metodo de entrenamiento"
-          fill
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#07080a] via-transparent to-black/20" />
-        <div className="relative mx-auto min-h-[620px] max-w-7xl px-5 py-20 sm:px-8 lg:px-10">
-          <div className="flex min-h-[460px] max-w-2xl flex-col justify-center">
-            <p className="text-xs font-black uppercase tracking-[0.32em] text-primary cyan-glow">
+      <section id="metodo" className="bg-white px-5 py-16 text-black sm:px-8 lg:px-10">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative min-h-[360px] overflow-hidden border border-black/10 shadow-[0_24px_80px_rgba(0,0,0,0.16)]">
+            <Image
+              src="/images/football-training.jpg"
+              alt="Metodo de entrenamiento"
+              fill
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+          </div>
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.32em] text-primary">
               Nuestro metodo
             </p>
-            <h2 className="floating-title mt-3 text-4xl font-black uppercase leading-none tracking-normal sm:text-5xl">
+            <h2 className="floating-title mt-3 text-4xl font-black uppercase leading-none tracking-normal text-black sm:text-5xl">
               Mas que entrenamientos, formamos jugadores que juegan{' '}
-              <span className={accent}>sin miedo.</span>
+              <span className="text-primary cyan-glow">sin miedo.</span>
             </h2>
-            <p className="mt-5 text-sm font-medium leading-6 text-white/78">
-              Nuestro enfoque combina tecnica, creatividad, inteligencia de
-              juego y mentalidad para desarrollar jugadores completos dentro y
-              fuera de la cancha.
+            <p className="mt-5 text-sm font-semibold leading-6 text-black/68">
+              Nuestro enfoque combina tecnica, creatividad, inteligencia de juego y mentalidad para
+              desarrollar jugadores completos dentro y fuera de la cancha.
             </p>
             <ul className="mt-6 space-y-3">
               {methodItems.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm font-bold text-white/90">
+                <li key={item} className="flex items-center gap-3 text-sm font-black text-black/80">
                   <Sparkles className="h-4 w-4 text-primary" />
                   {item}
                 </li>
               ))}
             </ul>
-            <Button className="mt-8 w-fit rounded-md font-black uppercase">
-              Conoce mas sobre nuestro metodo
-            </Button>
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex">
+              <Button className="rounded-md font-black uppercase">Conoce mas sobre nuestro metodo</Button>
+            </a>
           </div>
         </div>
       </section>
@@ -270,25 +283,36 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="galeria" className="bg-[#07080a] px-5 py-14 sm:px-8 lg:px-10">
+      <section id="galeria" className="bg-black px-5 py-16 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <p className="text-center text-xs font-black uppercase tracking-[0.32em] text-primary">
-            Ver es creer
+            Viven y crecen
           </p>
           <h2 className="floating-title mt-3 text-center text-3xl font-black uppercase tracking-normal">
-            Ellos ya juegan sin miedo
+            Entrenan, compiten y juegan sin miedo
           </h2>
-          <div className="mt-8 grid grid-cols-2 gap-2 md:grid-cols-5">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <div key={index} className="relative h-44 overflow-hidden">
+          <div className="mt-9 flex snap-x gap-4 overflow-x-auto pb-4 [scrollbar-color:#00E5FF_#111]">
+            {trainingGallery.map((item) => (
+              <article
+                key={item.title}
+                className="group relative h-72 min-w-[82%] snap-center overflow-hidden border border-white/10 bg-[#0B1220] sm:min-w-[46%] lg:min-w-[31%]"
+              >
                 <Image
                   src="/images/football-training.jpg"
-                  alt="Galeria de entrenamientos"
+                  alt={item.title}
                   fill
-                  className="object-cover"
-                  style={{ objectPosition: `${20 + index * 15}% center` }}
+                  sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 82vw"
+                  className="object-cover transition duration-500 group-hover:scale-110"
+                  style={{ objectPosition: item.position }}
                 />
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.25em] text-primary">
+                    Halcones
+                  </p>
+                  <h3 className="mt-2 text-2xl font-black uppercase leading-none">{item.title}</h3>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -312,14 +336,18 @@ export default function LandingPage() {
               Agenda hoy su clase de prueba y da el primer paso hacia su mejor version.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="rounded-md font-black uppercase">
-                <CalendarCheck className="h-4 w-4" />
-                Agenda tu clase de prueba
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-md border-white/25 bg-white/5 font-black uppercase text-white hover:bg-white/10 hover:text-white">
-                Escribenos por WhatsApp
-                <ArrowRight className="h-4 w-4" />
-              </Button>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                <Button size="lg" className="w-full rounded-md font-black uppercase sm:w-auto">
+                  <CalendarCheck className="h-4 w-4" />
+                  Agenda tu clase de prueba
+                </Button>
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                <Button size="lg" variant="outline" className="w-full rounded-md font-black uppercase sm:w-auto">
+                  Escribenos por WhatsApp
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </a>
             </div>
           </div>
           <div className="justify-self-center text-center lg:justify-self-end">
@@ -338,20 +366,17 @@ export default function LandingPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p>2026 Metodo Aristi Escuela de Futbol. Todos los derechos reservados.</p>
           <div className="flex items-center gap-5">
-            <a className="transition hover:text-primary" href="https://www.instagram.com/" aria-label="Instagram">
+            <a className="transition hover:text-primary" href="https://www.instagram.com/metodoaristi" aria-label="Instagram" target="_blank" rel="noreferrer">
               <Instagram className="h-4 w-4" />
             </a>
-            <a className="transition hover:text-primary" href="https://www.facebook.com/" aria-label="Facebook">
-              <Facebook className="h-4 w-4" />
-            </a>
-            <Link href="/login">Entrar al sistema</Link>
+            <a className="transition hover:text-primary" href="https://www.tiktok.com/@metodoaristi" target="_blank" rel="noreferrer">TikTok</a>
             <span>Politica de privacidad</span>
             <span>Terminos y condiciones</span>
           </div>
         </div>
       </footer>
       <a
-        href="https://wa.me/"
+        href={whatsappUrl}
         aria-label="WhatsApp"
         className="fixed bottom-5 right-5 z-[70] flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--primary)/0.55)] transition hover:scale-105"
       >

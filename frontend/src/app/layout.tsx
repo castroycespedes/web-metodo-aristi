@@ -1,22 +1,35 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Bebas_Neue, Inter, Oswald } from 'next/font/google';
 import './globals.css';
-import { AppProviders } from '@/components/providers/app-providers';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-bebas',
+});
+const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
 
 export const metadata: Metadata = {
   title: 'Metodo Aristi',
-  description: 'Escuela de futbol Metodo Aristi',
+  description:
+    'Escuela de futbol enfocada en tecnica, creatividad, confianza y mentalidad para jugadores jovenes.',
+  openGraph: {
+    title: 'Metodo Aristi',
+    description:
+      'Entrenamientos especializados con balon para formar jugadores tecnicos, creativos y sin miedo.',
+    type: 'website',
+    locale: 'es_CO',
+  },
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <AppProviders>{children}</AppProviders>
+    <html lang="es">
+      <body className={`${inter.variable} ${bebas.variable} ${oswald.variable}`}>
+        {children}
       </body>
     </html>
   );
