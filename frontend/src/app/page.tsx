@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LandingHeader } from '@/components/landing/landing-header';
+import { LandingGalleryCarousel } from '@/components/landing/landing-gallery-carousel';
 
 const accent = 'text-primary cyan-glow';
 const whatsappUrl =
@@ -291,30 +292,7 @@ export default function LandingPage() {
           <h2 className="floating-title mt-3 text-center text-3xl font-black uppercase tracking-normal">
             Entrenan, compiten y juegan sin miedo
           </h2>
-          <div className="mt-9 flex snap-x gap-4 overflow-x-auto pb-4 [scrollbar-color:#00E5FF_#111]">
-            {trainingGallery.map((item) => (
-              <article
-                key={item.title}
-                className="group relative h-72 min-w-[82%] snap-center overflow-hidden border border-white/10 bg-[#0B1220] sm:min-w-[46%] lg:min-w-[31%]"
-              >
-                <Image
-                  src="/images/football-training.jpg"
-                  alt={item.title}
-                  fill
-                  sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 82vw"
-                  className="object-cover transition duration-500 group-hover:scale-110"
-                  style={{ objectPosition: item.position }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.25em] text-primary">
-                    Halcones
-                  </p>
-                  <h3 className="mt-2 text-2xl font-black uppercase leading-none">{item.title}</h3>
-                </div>
-              </article>
-            ))}
-          </div>
+          <LandingGalleryCarousel items={trainingGallery} />
         </div>
       </section>
 
