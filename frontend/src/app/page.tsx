@@ -309,7 +309,7 @@ export default function LandingPage() {
               height={52}
               className="h-14 w-14 rounded-md object-cover"
             />
-            <p>2026 Método Aristi Escuela de Fútbol. Todos los derechos reservados.</p>
+            <p>2026 Método Aristi Academia de Tecnificación. Todos los derechos reservados.</p>
           </div>
           <SocialEntryLinks />
         </div>

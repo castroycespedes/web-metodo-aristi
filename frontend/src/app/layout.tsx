@@ -9,7 +9,7 @@ const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
 
 export const metadata: Metadata = {
   title: 'Método Aristi',
-  description: 'Escuela de fútbol Método Aristi',
+  description: 'Academia de tecnificación Método Aristi',
 };
 
 export default function RootLayout({
