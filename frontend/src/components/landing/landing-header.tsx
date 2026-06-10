@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Instagram, Menu, MessageCircle } from 'lucide-react';
+import { Instagram, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -9,15 +9,15 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { createWhatsappUrl, instagramUrl } from '@/lib/contact';
 
 const navItems = [
-  { href: '#metodo', label: 'Metodo' },
-  { href: '#funciona', label: 'Como funciona' },
+  { href: '#metodo', label: 'Método' },
+  { href: '#funciona', label: 'Cómo funciona' },
   { href: '#testimonios', label: 'Testimonios' },
-  { href: '#galeria', label: 'Galeria' },
+  { href: '#galeria', label: 'Galería' },
 ];
 
 export function LandingHeader() {
   const [open, setOpen] = useState(false);
-  const evaluationUrl = createWhatsappUrl('Quiero mi evaluacion tecnica');
+  const evaluationUrl = createWhatsappUrl('Quiero mi evaluación técnica');
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-md">
@@ -29,13 +29,19 @@ export function LandingHeader() {
               {item.label}
             </Link>
           ))}
-          <a className="transition hover:text-primary" href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram">
+          <a
+            className="flex h-8 w-8 items-center justify-center rounded-md bg-[radial-gradient(circle_at_30%_110%,#fdf497_0%,#fdf497_12%,#fd5949_38%,#d6249f_62%,#285AEB_100%)] text-white transition hover:scale-105"
+            href={instagramUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
             <Instagram className="h-4 w-4" />
           </a>
         </nav>
         <div className="hidden lg:block">
           <Button asChild className="rounded-md font-black uppercase">
-            <a href={evaluationUrl} target="_blank" rel="noreferrer">Agenda tu clase de prueba</a>
+            <a href={evaluationUrl} target="_blank" rel="noreferrer">Agenda tu evaluación técnica</a>
           </Button>
         </div>
         <Sheet open={open} onOpenChange={setOpen}>
@@ -76,8 +82,7 @@ export function LandingHeader() {
               </nav>
               <Button asChild className="mt-auto rounded-md font-black uppercase">
                 <a href={evaluationUrl} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
-                  <MessageCircle className="h-4 w-4" />
-                  Agenda tu clase de prueba
+                  Agenda tu evaluación técnica
                 </a>
               </Button>
             </div>
@@ -92,16 +97,16 @@ function Brand({ onClick }: { onClick?: () => void }) {
   return (
     <Link href="/" onClick={onClick} className="flex items-center gap-3">
       <Image
-        src="/images/metodo-aristi-logo.jpeg"
-        alt="Metodo Aristi"
+        src="/assets/metodo-aristi-logo.jpeg"
+        alt="Método Aristi"
         width={48}
         height={48}
         className="h-12 w-12 rounded-md object-cover"
       />
       <div>
-        <p className="text-xl font-black uppercase leading-none">Metodo Aristi</p>
+        <p className="text-xl font-black uppercase leading-none">Método Aristi</p>
         <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/70">
-          Escuela de futbol
+          Escuela de fútbol
         </p>
       </div>
     </Link>
