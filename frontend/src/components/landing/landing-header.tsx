@@ -106,7 +106,7 @@ function Brand({ onClick }: { onClick?: () => void }) {
       <div>
         <p className="text-xl font-black uppercase leading-none">Método Aristi</p>
         <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/70">
-          Escuela de fútbol
+          Academia de tecnificación
         </p>
       </div>
     </Link>
