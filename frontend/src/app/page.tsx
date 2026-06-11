@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import {
   CalendarCheck,
-  Dumbbell,
-  Frown,
-  Goal,
+  CircleAlert,
+  ClipboardCheck,
+  Eye,
+  Footprints,
   MessageCircle,
+  Route,
+  ScanSearch,
   ShieldCheck,
   Sparkles,
-  Trophy,
-  Users,
+  TrendingUp,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ImageCarousel } from '@/components/landing/image-carousel';
@@ -20,30 +22,12 @@ const accent = 'text-primary';
 const evaluationWhatsappUrl = createWhatsappUrl('Quiero mi evaluación técnica');
 
 const problems = [
-  {
-    icon: MessageCircle,
-    title: 'Entrena, pero no despega.',
-  },
-  {
-    icon: Frown,
-    title: 'Le falta confianza con el balón.',
-  },
-  {
-    icon: Dumbbell,
-    title: 'Tiene miedo de equivocarse.',
-  },
-  {
-    icon: Goal,
-    title: 'En los partidos desaparece.',
-  },
-  {
-    icon: Trophy,
-    title: 'No se atreve a encarar.',
-  },
-  {
-    icon: Users,
-    title: 'La escuela tradicional no trabaja detalles técnicos.',
-  },
+  { icon: TrendingUp, title: 'Entrena, pero no despega.' },
+  { icon: ShieldCheck, title: 'Le falta confianza con el balón.' },
+  { icon: CircleAlert, title: 'Tiene miedo de equivocarse.' },
+  { icon: Eye, title: 'En los partidos desaparece.' },
+  { icon: Footprints, title: 'No se atreve a encarar.' },
+  { icon: ScanSearch, title: 'La escuela tradicional no trabaja detalles técnicos.' },
 ];
 
 const methodItems = [
@@ -65,13 +49,13 @@ const steps = [
     number: '2',
     title: 'Evaluamos su nivel',
     text: 'Revisamos técnica, confianza y forma de competir.',
-    icon: ShieldCheck,
+    icon: ClipboardCheck,
   },
   {
     number: '3',
     title: 'Entrenamos para transformar',
     text: 'Mejoramos hábitos, mentalidad y rendimiento en cancha.',
-    icon: Dumbbell,
+    icon: Route,
   },
 ];
 
@@ -102,6 +86,36 @@ const galleryImages = [
   '/assets/metodo-aristi-gallery-3.jpeg',
   '/assets/metodo-aristi-gallery-4.jpeg',
   '/assets/metodo-aristi-gallery-5.jpeg',
+  '/assets/metodo-aristi-carousel-01.jpeg',
+  '/assets/metodo-aristi-carousel-02.jpeg',
+  '/assets/metodo-aristi-carousel-03.jpeg',
+  '/assets/metodo-aristi-carousel-04.jpeg',
+  '/assets/metodo-aristi-carousel-05.jpeg',
+  '/assets/metodo-aristi-carousel-06.jpeg',
+  '/assets/metodo-aristi-carousel-07.jpeg',
+  '/assets/metodo-aristi-carousel-08.jpeg',
+  '/assets/metodo-aristi-carousel-09.jpeg',
+  '/assets/metodo-aristi-carousel-10.jpeg',
+  '/assets/metodo-aristi-carousel-11.jpeg',
+  '/assets/metodo-aristi-carousel-12.jpeg',
+  '/assets/metodo-aristi-carousel-13.jpeg',
+  '/assets/metodo-aristi-carousel-14.jpeg',
+  '/assets/metodo-aristi-carousel-15.jpeg',
+  '/assets/metodo-aristi-carousel-16.jpeg',
+  '/assets/metodo-aristi-carousel-17.jpeg',
+  '/assets/metodo-aristi-carousel-18.jpeg',
+  '/assets/metodo-aristi-carousel-19.jpeg',
+  '/assets/metodo-aristi-carousel-20.jpeg',
+  '/assets/metodo-aristi-carousel-21.jpeg',
+  '/assets/metodo-aristi-carousel-22.jpeg',
+  '/assets/metodo-aristi-carousel-23.jpeg',
+  '/assets/metodo-aristi-carousel-24.jpeg',
+  '/assets/metodo-aristi-carousel-25.jpeg',
+  '/assets/metodo-aristi-carousel-26.jpeg',
+  '/assets/metodo-aristi-carousel-27.jpeg',
+  '/assets/metodo-aristi-carousel-28.jpeg',
+  '/assets/metodo-aristi-carousel-29.jpeg',
+  '/assets/metodo-aristi-carousel-30.jpeg',
 ];
 
 export default function LandingPage() {
@@ -159,8 +173,10 @@ export default function LandingPage() {
               const Icon = problem.icon;
 
               return (
-                <div key={problem.title} className="flex flex-col items-center gap-3">
-                  <Icon className="h-10 w-10 text-primary" strokeWidth={1.7} />
+                <div key={problem.title} className="flex flex-col items-center gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full border border-primary/35 bg-primary/5 shadow-[0_0_22px_hsl(var(--primary)/0.10)]">
+                    <Icon className="h-8 w-8 text-primary" strokeWidth={1.8} />
+                  </div>
                   <p className="max-w-36 text-sm font-semibold leading-5 text-white/80">
                     {problem.title}
                   </p>
@@ -230,8 +246,8 @@ export default function LandingPage() {
 
               return (
                 <div key={step.number} className="flex gap-5 border border-white/10 bg-white/[0.03] p-6">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/15">
-                    <Icon className="h-7 w-7 text-primary" />
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-primary/40 bg-primary/5 shadow-[0_0_20px_hsl(var(--primary)/0.12)]">
+                    <Icon className="h-7 w-7 text-primary" strokeWidth={1.9} />
                   </div>
                   <div>
                     <p className="text-5xl font-black leading-none text-primary">{step.number}</p>
@@ -327,7 +343,7 @@ export default function LandingPage() {
               height={52}
               className="h-14 w-14 rounded-md object-cover"
             />
-            <p>2026 Método Aristi Escuela de Fútbol. Todos los derechos reservados.</p>
+            <p>2026 Método Aristi Academia de Tecnificación. Todos los derechos reservados.</p>
           </div>
           <SocialEntryLinks />
         </div>

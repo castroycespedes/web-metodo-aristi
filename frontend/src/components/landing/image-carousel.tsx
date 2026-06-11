@@ -78,18 +78,18 @@ export function ImageCarousel({
             <ChevronRight className="h-5 w-5" />
           </button>
           <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-          {images.map((src, index) => (
-            <button
-              key={src}
-              type="button"
-              aria-label={`Ver imagen ${index + 1}`}
-              onClick={() => setActive(index)}
-              className={cn(
-                'h-2.5 rounded-full border border-primary/70 transition-all',
-                index === active ? 'w-7 bg-primary' : 'w-2.5 bg-black/45 hover:bg-primary/60',
-              )}
-            />
-          ))}
+            {images.map((src, index) => (
+              <button
+                key={src}
+                type="button"
+                aria-label={`Ver imagen ${index + 1}`}
+                onClick={() => setActive(index)}
+                className={cn(
+                  'h-2.5 rounded-full border border-primary/70 transition-all',
+                  index === active ? 'w-7 bg-primary' : 'w-2.5 bg-black/45 hover:bg-primary/60',
+                )}
+              />
+            ))}
           </div>
         </>
       ) : null}

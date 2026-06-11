@@ -50,7 +50,7 @@ export function LandingHeader() {
               variant="outline"
               size="icon"
               className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white lg:hidden"
-              aria-label="Abrir menu"
+              aria-label="Abrir menú"
             >
               <Menu className="h-5 w-5" />
             </Button>
@@ -106,7 +106,7 @@ function Brand({ onClick }: { onClick?: () => void }) {
       <div>
         <p className="text-xl font-black uppercase leading-none">Método Aristi</p>
         <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/70">
-          Escuela de fútbol
+          Academia de tecnificación
         </p>
       </div>
     </Link>
